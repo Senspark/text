@@ -45,7 +45,7 @@ Remote Config sẽ khai báo chọn các file nhất định để áp dụng ho
 ### Cấu trúc file RandomMeta.csv:
 Cấu trúc CSV ví dụ như sau:
 - Cột `file_name` là tên file
-- Cột `difficulty` là độ khó
+- Cột `difficulty` là độ khó, cho phép filter theo độ khó
 - Cột `gold_value` là tổng giá trị của các items, có thể cho phép filter theo số vàng (dự tính)
 ```csv
 file_name, difficulty, gold_value
