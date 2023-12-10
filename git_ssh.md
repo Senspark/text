@@ -1,8 +1,9 @@
 # Cài đặt SSH cho Github
 
-## MACOS:
+- [MacOS](#macos)
+- [Windows](#windows)
 
-*Lưu ý: Đối với Windows thì sử dụng GitBash*
+## MacOS
 
 ### 1. Kiểm tra SSH key có tồn tại chưa:
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys
@@ -79,7 +80,7 @@ git@github.com:org/project.git.     => sử dụng user default
 #### Sử dụng SSH với multiple account:
 https://gist.github.com/oanhnn/80a89405ab9023894df7
 
-## WINDOWS:
+## WINDOWS
 
 *Lưu ý: Windows sử dụng GitBash*
 
