@@ -87,8 +87,8 @@ ssh -T git@github-nhannh
 ```
 
 #### Format của github link:
-git@github-nhannh:org/project.git => sử dụng user nhannh  
-git@github.com:org/project.git.     => sử dụng user default
+`git@github-nhannh:org/project.git` => sử dụng user `nhannh`  
+`git@github.com:org/project.git`    => sử dụng user `default`
 
 #### Sử dụng SSH với multiple account:
 https://gist.github.com/oanhnn/80a89405ab9023894df7
@@ -187,8 +187,8 @@ ssh -T git@github-nhannh
 ```
 
 ### Format của github link:
-git@github-nhannh:org/project.git => sử dụng user nhannh  
-git@github.com:org/project.git.     => sử dụng user default
+`git@github-nhannh:org/project.git` => sử dụng user `nhannh`  
+`git@github.com:org/project.git`    => sử dụng user `default`
 
 ### Sử dụng SSH với multiple account:
 https://gist.github.com/oanhnn/80a89405ab9023894df7
