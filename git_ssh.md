@@ -1,7 +1,20 @@
 # Cài đặt SSH cho Github
 
+Hướng dẫn cho từng OS:
 - [MacOS](#macos)
 - [Windows](#windows)
+
+Mục đích:  
+Link git có 2 dạng:
+- HTTPS: `https://github.com/account/project.git`
+- SSH: `git@github.com:account/project.git`
+
+Trong nhiều trường hợp dùng HTTPS sẽ tiện lợi, nhưng Github gần đây yêu cầu bảo mật nhiều lớp -> kém tiện lợi hơn xưa.  
+Nếu sử dụng nhiều tài khoản Git trên cùng 1 machine cũng xảy ra nhiều phiền toái hơn.  
+Cho nên có thể sử dụng SSH để thay thế cho HTTPS.  
+Việc setup SSH hơi phức tạp ban đầu, nhưng chỉ thực hiện 1 lần duy nhất.
+
+*Lưu ý: Các lệnh bên dưới phải thay bằng email cần sử dụng*
 
 ## MacOS
 
@@ -79,6 +92,8 @@ git@github.com:org/project.git.     => sử dụng user default
 
 #### Sử dụng SSH với multiple account:
 https://gist.github.com/oanhnn/80a89405ab9023894df7
+
+---
 
 ## WINDOWS
 
