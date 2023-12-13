@@ -23,12 +23,12 @@ Link: https://docs.google.com/spreadsheets/d/1VlwUzIuH7E4cTdk0pLLxsjEAgQ7D3b5Dbi
 
 Lưu ý:
 - Chỉ cho phép sửa chỉ số trên Sheet.
-- Thêm, xóa dòng, xoá cột, thay đổi cấu trúc file sẽ dẫn đến lỗi data (file OVERRIDE và file BASE có thể ko match với nhau).  
+- Thêm, xóa dòng, xoá cột, thay đổi cấu trúc file sẽ dẫn đến lỗi data (file `OVERRIDE` và file `BASE` có thể ko match với nhau).  
 - Những chỉnh sửa phức tạp sẽ chỉnh trên Level Editor.
 
 ### Cách hoạt động:
-Menu > Senspark > Import CSV sẽ xoá toàn bộ Sheet data & convert file từ Cloud -> Sheet  
-Menu > Senspark > Export CSV sẽ soạn file CSV override để tải về  
+Menu > Senspark > Import CSV : sẽ xoá toàn bộ Sheet data & convert file `BASE` từ Cloud -> Sheet  
+Menu > Senspark > Export CSV : sẽ soạn file CSV `OVERRIDE` để tải về  
 
 ## Cloud Storage:
 Cấu trúc:
@@ -41,10 +41,14 @@ level_data
       ___ lv1_2023_12_24.csv (giống file lv1 nhưng đã được chỉnh sửa ngày 24/12/2023)
       ___ override_level_data_2023_12_24.csv (file data export ra từ Google Sheet)
     L__ v2
-      L__ ... (như cấu trúc trên, nhưng chỉ phát sinh trong trường hợp có thay đổi hoàn toàn về cấu trúc file Level data)
+      L__ ... (như cấu trúc trên, nhưng chỉ phát sinh trong trường hợp: sau này có thay đổi hoàn toàn về cấu trúc file Level data)
   L__ prod
     L__ ... (cấu trúc tương tự, nhưng chỉ dành cho production)
 ```
+
+Lưu ý:
+- Đối với các file đã áp dụng cho production thì ko xoá file cũ, vì user version cũ vẫn có thể reference đến những files này.
+- Có thể cân nhắc gộp tất cả các file `BASE`: lv1.csv, lv2.csv, ... vào 1 file duy nhất giống như file `OVERRIDE`
 
 ## Remote Config:
 key: `level_data_v1_test` & `level_data_v1_prod`  
@@ -59,6 +63,9 @@ lv, fileName
 override, override_level_data_2023_12_24.csv
 ```
 
+Lưu ý:
+- Điều chỉnh & test lại `level_data_v1_test` trước khi áp dụng cho production
+
 ## Cách Game khởi tạo level:
 Các bước:
 1. Đọc data từ Remote Config để lấy danh sách các file cần tải về
@@ -71,3 +78,6 @@ Các bước:
 Sẽ build trang Web cho phép edit level, sắp xếp vị trí, vẽ đường bay, thêm/ xoá/ sửa quái, mô phỏng đường bay, chỉnh sửa Wave, ...  
 Level Data sẽ được đọc từ Cloud & lưu vào Cloud sau khi edit xong.  
 Mục đích là cho phép Design review sơ level, edit nhanh level ko cần Unity.  
+
+Web Level Editor cần nhiều thời gian để phát triển, trước mắt Design vẫn phải sử dụng Unity.  
+Nhưng sẽ bổ sung dần thêm các tính năng giúp edit level nhanh hơn.
