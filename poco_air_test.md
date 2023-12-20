@@ -26,12 +26,38 @@ Sau khi connect thành công, streaming sẽ được hiển thị trên màn h�
 - Rút dây và cắm lại
 - Set chế độ kết nối `chỉ sạc`
 
-### 1.2. Chế độ ghi lại màn hình:
+### 1.2. Cách hoạt động:
+Airtest & Poco hoạt động theo 2 cách:
+- Nhận diện hình ảnh (không cần tích hợp thư viện vào game)
+- Gọi trực tiếp code trong Unity (cần tích hợp thư viện vào game)
+
+Thông qua 1 trong 2 cách trên, chúng ta sẽ viết script bằng `Python` để giao tiếp với game.  
+Chỉ cần sử dụng các cú pháp cơ bản của Python:
+- if `điều kiện`:
+- for i in range(`5`):
+- while `điều kiện`:
+- ...
+
+Và các cú pháp riêng của Airtest cung cấp:
+- touch(`gì đó`)
+- swipe(`gì đó`)
+- sleep(`1.5`)
+- exist(`điều kiện`)
+- ...
+
+Cơ bản về cú pháp của Python:
+- Các lệnh ngăn cách với nhau bằng dấu `xuống hàng`
+- Các lệnh lồng nhau bằng dấu `Tab`
+
+### 1.3. Viết script cơ bản:
 
 Nhấp vào nút `Record` để bắt đầu ghi lại các thao tác trên màn hình.  
+Hoặc nhấp vào nút `Screenshot` để chụp lại hình cần thao tác.  
 ![image](images/poco/record_btn.png)
 
-Sau khi ghi lại được các thao tác, có thể chỉnh sửa script theo ví dụ bên dưới:  
+---
+
+Ví dụ:  
 ![image](images/poco/script_sample.png)
 
 Giải thích script:
@@ -42,10 +68,28 @@ Giải thích script:
 5. Bấm vào nút `Lính kiếm` 100 lần
 6. ...
 
-Để chạy script, trở lại màn hình game ban đầu và nhấp vào nút `Play` trên Airtest:  
+---
+
+#### Ví dụ khác về code phức tạp hơn:  
+![image](images/poco/script_sample_2.png)
+
+Giải thích script:
+1. Nhấp vào nút `Play`
+2. Nếu hình này chưa xuất hiện thì chờ 1 giây rồi lặp lại
+3. Bấm vào nút `X`
+
+---
+
+#### Để chạy script:
+Trở lại màn hình game ban đầu và nhấp vào nút `Play` trên Airtest:  
 ![image](images/poco/play_btn.png)
 
-Lưu lại file script để dùng cho lần sau.
+---
+
+Lưu lại file script để dùng cho lần sau.  
+File script ví dụ: https://drive.google.com/file/d/1Vk0FhsdgCIYWSaDUjObnrb0MkjVDIq0Z/view?usp=sharing
+
+---
 
 ## 2. Hỗ trợ Unity:
 Bổ sung sau: https://airtest.doc.io.netease.com/en/tutorial/11_test_Unity3D_game/
