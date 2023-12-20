@@ -90,5 +90,5 @@ File script ví dụ: https://drive.google.com/file/d/1Vk0FhsdgCIYWSaDUjObnrb0Mk
 
 ---
 
-## 2. Hỗ trợ Unity:
+## 2. Tích hợp nâng cao cho Unity:
 Bổ sung sau: https://airtest.doc.io.netease.com/en/tutorial/11_test_Unity3D_game/
