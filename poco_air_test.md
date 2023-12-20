@@ -28,10 +28,10 @@ Sau khi connect thành công, streaming sẽ được hiển thị trên màn h�
 
 ### 1.2. Chế độ ghi lại màn hình:
 
-Nhấp vào nút `Record` để bắt đầu ghi lại các thao tác trên màn hình.
+Nhấp vào nút `Record` để bắt đầu ghi lại các thao tác trên màn hình.  
 ![image](images/poco/record_btn.png)
 
-Sau khi ghi lại được các thao tác, có thể chỉnh sửa script theo ví dụ bên dưới:
+Sau khi ghi lại được các thao tác, có thể chỉnh sửa script theo ví dụ bên dưới:  
 ![image](images/poco/script_sample.png)
 
 Giải thích script:
