@@ -1,6 +1,6 @@
 # Poco Air Test
 
-Chức năng hỗ trợ Automated Testing cho Unity
+Chức năng hỗ trợ Automated Testing cho nhiều hệ thống khác nhau
 
 ## 1. Cài đặt:
 Tải Airtest IDE tại: https://airtest.netease.com/  
@@ -15,7 +15,7 @@ Chương trình sẽ yêu cầu đăng nhập, hãy click chọn tạo tải kho
 Connect thiết bị với Airtest:  
 ![image](images/poco/adb_wired.png)  
 
-Có thể connect thông qua wifi:  
+Có thể connect thông qua wifi (tùy chọn):  
 ![image](images/poco/adb_remote.png)  
 
 Sau khi connect thành công, streaming sẽ được hiển thị trên màn hình:  
@@ -42,7 +42,7 @@ Giải thích script:
 5. Bấm vào nút `Lính kiếm` 100 lần
 6. ...
 
-Để chạy script, trở lại màn hình game ban đầu và nhấp vào nút `Play` trên Airtest:
+Để chạy script, trở lại màn hình game ban đầu và nhấp vào nút `Play` trên Airtest:  
 ![image](images/poco/play_btn.png)
 
 Lưu lại file script để dùng cho lần sau.
