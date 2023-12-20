@@ -4,11 +4,10 @@ Chức năng hỗ trợ Automated Testing cho nhiều hệ thống khác nhau
 
 ## 1. Cài đặt:
 Tải Airtest IDE tại: https://airtest.netease.com/  
-Link git: https://github.com/AirtestProject/Poco
+Link git (tham khảo): https://github.com/AirtestProject/Airtest && https://github.com/AirtestProject/Poco 
 
 Sau khi tải về, run file AirtestIDE.exe (Windows) để khởi động.  
 Chương trình sẽ yêu cầu đăng nhập, hãy click chọn tạo tải khoản AirLab.  
-
 
 ### 1.1. Giao diện cơ bản:
 
@@ -51,8 +50,8 @@ Cơ bản về cú pháp của Python:
 
 ### 1.3. Viết script cơ bản:
 
-Nhấp vào nút `Record` để bắt đầu ghi lại các thao tác trên màn hình.  
-Hoặc nhấp vào nút `Screenshot` để chụp lại hình cần thao tác.  
+Nhấp vào nút `Record` (nút bên phải) để bắt đầu ghi lại các thao tác trên màn hình.  
+Hoặc nhấp vào nút `Screenshot` (nút bên trái) để chụp lại hình cần thao tác.  
 ![image](images/poco/record_btn.png)
 
 ---
