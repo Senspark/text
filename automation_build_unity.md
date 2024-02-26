@@ -1,14 +1,19 @@
 # Build unity
-Bước 1: tạo file build script trong thư mục Asset/Editor và commit lên, lưu ý đúng tên thư mục Editor, không sẽ xảy ra lỗi
-Bước 2: Đảm bảo build tay trên unity version 2022.3.12f1 thành công trên máy build
+Bước 1: tạo file build script trong thư mục Asset/Editor và commit lên, lưu ý đúng tên thư mục Editor, không sẽ xảy ra lỗi  
+Bước 2: Đảm bảo build tay trên unity version 2022.3.12f1 thành công trên máy build  
 Bước 3: ssh vào máy build
-    ssh Senspark@192.1638.1.240
+```bash
+ssh Senspark@192.168.1.240
+```
 Bước 4: chạy file bash script build.sh với 3 tham số, tên project, tên branch (để pull source), mật khẩu keystore cũng như keyalias
-    C:\Users\Senspark>"C:\Program Files\Git\bin\sh.exe" build.sh project_name branch_name keystore_pass
+```powershell
+C:\Users\Senspark>"C:\Program Files\Git\bin\sh.exe" build.sh project_name branch_name keystore_pass
+```
 Bước 5: Đợi notification từ slack trong chanel unity-build và vào file share của máy build lấy file về
-    Open finder->Go->Connect to sever->Browse->build-unity->Connect As->Connect
+`Open finder->Go->Connect to sever->Browse->build-unity->Connect As->Connect`
 
 # File mẫu build script của tank1 (BuildScript.cs)
+```cs
 using UnityEditor;
 using UnityEngine;
 
@@ -30,9 +35,10 @@ public class BuildScript : MonoBehaviour
             , BuildTarget.Android, BuildOptions.None); // chỉnh lại project name
     }
 }
-
+```
 
 # File build.sh trên máy build
+```bash
 set -e #để khi gặp error sẽ dừng
 arg1=$1
 arg2=$2
@@ -63,3 +69,4 @@ echo Starting Build Process
 echo Ended Bulid Process
 
 curl -d "text=Build project $arg1 done." -d "channel=unity-build" -H "Authorization: Bearer xoxb-token-of-just-post-bot-when-create-bot-app" -X POST https://slack.com/api/chat.postMessage #dùng slack app just-post-bot để tạo message thông báo vào chanel unity-build
+```
