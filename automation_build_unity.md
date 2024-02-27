@@ -43,7 +43,7 @@ public class BuildScript : MonoBehaviour
         buildPlayerOptions.scenes = scenes;
         buildPlayerOptions.options = BuildOptions.None;
 
-        if (buildPlayerOptions.target == BuildTarget.Android) {
+        if (buildTarget == "Android") {
             var versionCode = PlayerSettings.Android.bundleVersionCode;
             buildPlayerOptions.target = BuildTarget.Android;
             buildPlayerOptions.locationPathName = $"C:/Users/Senspark/Project/builds/{projectName}/{versionCode}.apk";
