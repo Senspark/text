@@ -25,6 +25,7 @@ public class BuildScript : MonoBehaviour
     {
         var password = "@PASSWORD";
         var projectName = "@PROJECTNAME";
+        var buildTarget = "@BUILDTARGET";
         // tham số có thể chỉnh: https://docs.unity3d.com/ScriptReference/PlayerSettings.html
         PlayerSettings.SplashScreen.showUnityLogo = false;
         PlayerSettings.Android.keyaliasPass = password;
@@ -40,14 +41,15 @@ public class BuildScript : MonoBehaviour
 
         BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions();
         buildPlayerOptions.scenes = scenes;
-        buildPlayerOptions.target = BuildTarget.@BUILDTARGET;
         buildPlayerOptions.options = BuildOptions.None;
 
         if (buildPlayerOptions.target == BuildTarget.Android) {
             var versionCode = PlayerSettings.Android.bundleVersionCode;
+            buildPlayerOptions.target = BuildTarget.Android;
             buildPlayerOptions.locationPathName = $"C:/Users/Senspark/Project/builds/{projectName}/{versionCode}.apk";
         }
-        else {
+        else if (buildTarget == "WebGL") {
+            buildPlayerOptions.target = BuildTarget.WebGL;
             buildPlayerOptions.locationPathName = $"C:/Users/Senspark/Project/builds/{projectName}";
         }
 
