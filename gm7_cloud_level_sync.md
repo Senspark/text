@@ -9,6 +9,7 @@ Thư mục: `assets/resources/levels_json`, gồm có:
 - `/level_item`: các prefab sẽ sử dụng để liên kết trong các file json
 - `/miner`: các prefab sẽ sử dụng để liên kết trong các file json
 - `levels_checksum.json`: file tổng hợp các level sẽ sử dụng trong game.  
+
 ![image](images/gm7_cloud_level_sync/img.png)
 
 Chú thích cách đặt tên file:
@@ -41,14 +42,14 @@ Việc này để phục vụ cho Level Cloud Sync.
 #### Đối với Users (Gameplay):
 Khi vừa mở game, hệ thống sẽ `âm thầm` kết nối đến server và kiểm tra sự khác biệt giữa các file level JSON trên Game Client và Server.  
 Khi có sự khác biệt, hệ thống sẽ tự động download file mới nhất từ Server về Game Client.  
-Nếu không thể tải được file mới, hoặc có vấn để dẫn đến file ko tồn tại. Game sẽ `dùng file mặc định` đi kèm theo bản build.
+Nếu không thể tải được file mới, hoặc có vấn để dẫn đến file ko tồn tại. Game sẽ `dùng file mặc định` đi kèm theo bản build.  
 Nếu trước đó đã từng tải file mới rồi (v1), nay có file mới hơn nữa (v2), nhưng có sự cố (như trên đã nói), thì hệ thống sẽ dùng file (v1) đó thay cho file mặc định đi kèm theo bản build.
 
 Lưu ý: Chưa xử lý trường hợp file level mới không tương thích với Game Client (ví dụ nếu về sau có bổ sung thêm nhiều tính năng khác trong level mà Game Client version cũ không thể support được).  
 
 #### Đối với Dev/Designer:
-- Địa chỉ server: `http://192.168.1.102/gm7`
-- Thư mục chứa các file levels: `https://test1.bombcrypto.io/vfile/files/web/gm7/levels_test/` (liên hệ Dev lấy mật khẩu)
+- Địa chỉ server: http://192.168.1.102/gm7/
+- Thư mục chứa các file levels: https://test1.bombcrypto.io/vfile/files/web/gm7/levels_test/ (liên hệ Dev lấy mật khẩu)
 
 Giải thích về file `levels_checksum.json`:
 - File này tổng hợp các file Level JSON & mã Hash của chúng.
