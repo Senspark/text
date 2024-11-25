@@ -40,8 +40,8 @@ classDiagram
 
 Ví dụ:
 ```csharp
-# Class cần Refactor
-class A {
+// Class cần Refactor
+class Usage {
     void DoSomething() {
         if (IsNetworkA) {
             // Do something
@@ -54,29 +54,9 @@ class A {
     }
 }
 
-# Strategy Pattern style 1
-class A {
-    IStrategyOfClassA strategy;
-    
-    constructor(Network network) {
-        // Condition được quyết định 1 lần duy nhất tại Constructor, sau đó không cần quan tâm nữa
-        
-        if (network == Network.A) {
-            strategy = new StrategyA();
-        } else if (network == Network.B) {
-            strategy = new StrategyB();
-        } else {
-            strategy = new StrategyC();
-        }
-    }
-    
-    void DoSomething() {
-        strategy.DoSomething();
-        // Do other things
-    }
-}
+// ============================================
 
-# Strategy Pattern style 2
+// Strategy Pattern style 1
 interface IStrategy {
     void DoSomething
 }
@@ -102,9 +82,22 @@ class StrategyC : IStrategy {
 class Usage {
     IStrategy strategy;
     
-    void Use() {
-        strategy = new StrategyA(); // or StrategyB, StrategyC
+    constructor(Network network) {
+        // Condition được quyết định 1 lần duy nhất tại Constructor, sau đó không cần quan tâm nữa
+        
+        if (network == Network.A) {
+            strategy = new StrategyA();
+        } else if (network == Network.B) {
+            strategy = new StrategyB();
+        } else {
+            strategy = new StrategyC();
+        }
+    }
+    
+    void DoSomething() {
         strategy.DoSomething();
+        // Do other things
     }
 }
+
 ```
