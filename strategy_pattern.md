@@ -56,9 +56,9 @@ class Usage {
 
 // ============================================
 
-// Strategy Pattern style 1
+// Strategy Pattern
 interface IStrategy {
-    void DoSomething
+    void DoSomething();
 }
 
 class StrategyA : IStrategy {
