@@ -25,6 +25,13 @@ sequenceDiagram
     B ->> A: AES Encrypted Message
 ```
 
+### Các cặp mã hoá:
+- Unity & React:
+  - Unity tạo RSA, React tạo AES
+- Unity & Smartfox:
+  - Api Server (ap-login) tạo RSA, Unity tạo AES. Unity lấy RSA Public Key thông qua React.
+  - Unity gửi LoginData cho SmartFox. SmartFox yêu cầu Api Server giải mã LoginData để lấy được AES_Key
+
 # Thay đổi của Server:
 MainGameExtension sẽ ko đăng ký toàn bộ các Handlers/Managers/Services/StreamListeners, mà tuỳ thuộc vào mạng để chia ra 3 Initializer:
 - Gồm 3 mạng: Legacy, TON, SOL
