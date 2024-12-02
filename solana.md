@@ -2,6 +2,43 @@
 - Giao tiếp giữa Unity & React & SmartFox Server được mã hoá.
 - Login vào SmartFox cần có: JWT & PublicKey từ Api Server.
 
+## Cách mã hoá:
+1. Bước 1: Handshake:
+   - A sẽ tạo RSA(PublicKey, PrivateKey) và truyền PublicKey cho B
+   - B sẽ tạo AES(AesKey) và mã hoá bằng PublicKey, response cho A
+2. Bước 2: Giao tiếp
+   - A giải mã để lấy AesKey, từ đó giao tiếp giữa A & B sẽ mã hoá bằng AesKey
+   - RSA ko còn được sử dụng nữa.
+
+```mermaid
+---
+title: Cách mã hoá
+---
+sequenceDiagram
+    participant A
+    participant B
+    Note over A, B: Bước 1: Handshake
+    A ->> B: RSA Public Key
+    B ->> A: AES Key (RSA Encrypted)
+    Note over A, B: Bước 2: Kể từ đây giao tiếp giữa A & B sẽ mã hoá bằng AesKey
+    A ->> B: AES Encrypted Message
+    B ->> A: AES Encrypted Message
+```
+
+# Thay đổi của Server:
+MainGameExtension sẽ ko đăng ký toàn bộ các Handlers/Managers/Services/StreamListeners, mà tuỳ thuộc vào mạng để chia ra 3 Initializer:
+- Gồm 3 mạng: Legacy, TON, SOL
+- Chia ra đăng ký các Handler cho từng mạng.
+- Handler nào đăng ký rồi thì sẽ throw Exception.
+- Các StreamListener cũng vậy
+- Các Manager/Service sẽ thay đổi lại: chỉ load database nếu Initializer của mạng đó có gọi đến.
+- Các Scheduler cũng vậy
+- .env bổ sung thêm:
+    - IS_SOL_SERVER=1
+    - SOL_VERIFY_LOGIN="/login/sol/verify"
+
+# Chi tiết:
+
 ## Quy trình P1: giao tiếp giữa React & Api
 1. Khi web vừa khởi động, React Connect Wallet.
 2. React gửi yêu cầu lấy NONCE từ Api.
@@ -106,15 +143,3 @@ Exploit case:
 
 Exploit case:
 - Nếu Attacker mock AES_KEY của Unity & gửi cho Smartfox, thì từ đó giao tiếp giữa Unity & Smartfox sẽ bị lộ.
-
-# Thay đổi của Server:
-MainGameExtension sẽ ko đăng ký toàn bộ các Handlers/Managers/Services/StreamListeners, mà tuỳ thuộc vào mạng để chia ra 3 Initializer:
-- Gồm 3 mạng: Legacy, TON, SOL
-- Chia ra đăng ký các Handler cho từng mạng.
-- Handler nào đăng ký rồi thì sẽ throw Exception.
-- Các StreamListener cũng vậy
-- Các Manager/Service sẽ thay đổi lại: chỉ load database nếu Initializer của mạng đó có gọi đến.
-- Các Scheduler cũng vậy
-- .env bổ sung thêm:
-  - IS_SOL_SERVER=1
-  - SOL_VERIFY_LOGIN="/login/sol/verify"
