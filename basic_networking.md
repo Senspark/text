@@ -8,7 +8,7 @@ Gồm 4 bytes, giá trị nhỏ nhất là 0, giá trị lớn nhất là 2^32 -
 
 ## Special address:
 ### Loopback address:
-Dải địa chỉ từ 127.0.0.0/8 (127.0.0.0 -> 127.0.0.255).  
+Dải địa chỉ từ 127.0.0.0/8 (127.0.0.0 -> 127.255.255.255).  
 Đều được quy ước là `localhost`, có nghĩa là thiết bị của người đang thao tác. Người khác không thể sử dụng được.  
 Mục đích để test network call khi phát triển phần mềm.   
 Phổ biến thường thấy là 127.0.0.1
