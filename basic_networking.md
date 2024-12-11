@@ -83,6 +83,14 @@ Ví dụ vài port đã được đăng ký trước:
 - 80: Port HTTP
 - 443: Port HTTPS
 
+## Giao thức:
+- UDP:
+- TCP:
+  - HTTP
+  - WebSocket
+  - FTP
+  - SSH
+
 ## Các lệnh thử nghiệm network:
 Dưới đây sử dụng `netcat`:
 
