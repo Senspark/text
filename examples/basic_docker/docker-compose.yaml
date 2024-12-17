@@ -1,0 +1,25 @@
+services:
+
+  demo1:
+    image: demo
+    container_name: demo1
+    environment:
+      TZ: 'Asia/Bangkok'
+    ports:
+      - "4001:3000"
+    networks:
+      - example-network
+
+  demo2:
+    image: demo
+    container_name: demo2
+    environment:
+      TZ: 'Asia/Bangkok'
+    ports:
+      - "4002:3000"
+    networks:
+      - example-network
+
+networks:
+  example-network:
+    driver: bridge
