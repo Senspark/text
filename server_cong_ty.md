@@ -1,19 +1,19 @@
-# Cơ bản về Docker
+# Docker Server công ty
 
 Tất cả Services của Server được vận hành bởi các file sau đây:
-- compose.yaml
-- compose.override.yaml
+- `compose.yaml`
+- `compose.override.yaml`
 
 Nếu Smartfox, thì gồm cả:
-- sv-game.env
+- `sv-game.env` : File env dùng chung cho 4 server smartfox của công ty
 
 
 Nếu muốn sửa Env của 1 Services bất kỳ, ví dụ: `sv-game-v2`
 
 ![sv-game-v2](images/server_cong_ty/sample1.png)
 
-- Sửa trong file sv-game.env: Nếu muốn áp dụng chung cho tất cả các server smartfox
-- Sửa trong phần environment: Nếu muốn chỉ áp dụng riêng cho sv-game-v2
+- Sửa trong file `sv-game.env`: Nếu muốn áp dụng chung cho tất cả các server smartfox
+- Sửa trong phần environment: Nếu muốn chỉ áp dụng riêng cho `sv-game-v2`
   - Ví dụ:
   - Sửa IS_SOL_SERVER thành '0'
   - Thêm IS_TON_SERVER = '1'
