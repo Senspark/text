@@ -10,7 +10,7 @@ Nếu Smartfox, thì gồm cả:
 
 Nếu muốn sửa Env của 1 Services bất kỳ, ví dụ: `sv-game-v2`
 
-![sv-game-v2](images/server_cong_ty/sample2.png)
+![sv-game-v2](images/server_cong_ty/sample4.png)
 
 - Sửa trong file `sv-game.env`: Nếu muốn áp dụng chung cho tất cả các server smartfox
 - Sửa trong phần environment: Nếu muốn chỉ áp dụng riêng cho `sv-game-v2`
