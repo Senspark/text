@@ -19,6 +19,7 @@ Nếu muốn sửa Env của 1 Services bất kỳ, ví dụ: `sv-game-v2`
   - Thêm IS_TON_SERVER = '1'
   - Xoá IS_GAME_PRIMARY_SERVER
 - Sau khi sửa xong, cần build lại service đó, ví dụ:
-  - `ssh senspark@192.168.1.102`
+  - ssh vào máy công ty
   - `cd /mnt/disk1/ubuntu/config`
   - `docker compose up -d --build sv-game-v2`
+
