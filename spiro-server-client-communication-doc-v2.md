@@ -64,8 +64,8 @@ Nếu phải thay đổi, thay đổi luôn cả key, ví dụ đổi key từ "
 
 
 ## Các API Endpoint:
-- /register : đăng ký lần đầu để có UUID & Secret.
-- /login : nếu thông tin login không đúng. Đẩy ra màn hình Login.
+- /register: đăng ký lần đầu để có UUID & Secret.
+- /login: nếu thông tin login không đúng. Đẩy ra màn hình Login.
 - /push: Client push lên data mới.
 - /link: Link với Google account.
 - /pull: Download data từ server về.
