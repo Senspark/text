@@ -8,11 +8,11 @@ Hậu quả:
 - Vì ôm nhiều nhiệm vụ: Thêm/xoá/sửa code khả năng cao gây ra breaking change.
 
 ## 2. Pattern Singleton:
-Bất cứ thứ gì sử dụng static/global scope mà không phải vì nó ít thay đổi. Lifetime của object được gắn liền với Application.
+Bất cứ thứ gì sử dụng static/global scope mà không phải vì nó ít thay đổi.
 
 Hậu quả:
 - Khó kiểm soát lỗi: Vì không biết khi nào object được khởi tạo? Dev thường lấp liếm bằng các condition kiểm tra null để khởi tạo dynamic.
-- Memory phình to: Vì object không bao giờ được destroy.
+- Memory không được giải phóng: Vì object không bao giờ được destroy.
 - Vì là single object: Không thể tái sử dụng.
 - Không thấy được mối quan hệ phụ thuộc giữa các class, đặc biệt khi có nhiều class Singleton sử dụng lẫn nhau.
 
