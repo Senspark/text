@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
 - Nghiêm cấm Singleton & God Class.
 - Không kế thừa quá 3 bậc.
 - Không sử dụng `Infinite Loop` nếu không cần thiết.
-- Không viết `static class` nếu không có lý do hợp lý.
+- Không viết `static class/fields/properties` nếu không có lý do hợp lý.
 - Không viết nhiều logic vào Properties. Thay thế bằng Method.
 - Không sử dụng C# event. Thay thế bằng Pattern Observer.
 - Không viết `partial class`.
@@ -124,9 +124,9 @@ public class PlayerController : MonoBehaviour
 - Tất cả khai báo Resolve ServiceLocator phải được viết trong Awake().
 - Class Pure C# (không phải MonoBehaviour): không được sử dụng trực tiếp ServiceLocator, phải truyền dependencies vào constructor.
 - Service không được là MonoBehaviour.
-- GetComponent hoặc FindObject: chỉ được sử dụng ở Awake, Start hoặc các function tương đương.
+- GetComponent hoặc FindObject: chỉ được sử dụng ở Awake hoặc Start. Nhưng không khuyến khích sử dụng các function này.
 - Không so sánh MonoBehaviour với null.
-- Không được sử dụng Coroutine. Không được sử dụng Invoke(). Thay thế bằng UniTask.
+- Không được sử dụng `Coroutine` và `Invoke()`. Thay thế bằng UniTask.
 - Không được sử dụng `DoTween.Clear()` hoặc tương đương. Object nào tạo Tween, object đó chịu trách nhiệm Kill. Không được Kill All.
 
 ---
