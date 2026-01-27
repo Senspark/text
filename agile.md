@@ -15,10 +15,8 @@
 - Ngày bắt đầu của mỗi Sprint sẽ tuỳ thuộc vào project.
 
 ### Tổ chức của 1 Table:
-┌─────────────┬─────────────┬─────────────┬─────────────┐
-│  Backlog    │ This Week   │ In Progress │    Done     │
-│             │   (Sprint)  │             │             │
-└─────────────┴─────────────┴─────────────┴─────────────┘
+| Backlog | This Week (Sprint) | In Progress | Blocked | Done |
+|---------|--------------------|-------------|---------|------|
 
 ---
 
