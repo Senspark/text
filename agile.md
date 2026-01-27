@@ -36,8 +36,8 @@
 - Khi Sprint đã bắt đầu, cột This Week không được thêm Task vào, chỉ có thể remove ra.
 
 ## 3. Processing:
-- Dev chọn 1 Task ở cộg This Week và move sang cột In Progress. Mỗi Dev chỉ được có 1 Task duy nhất ở In Progress.
-- Nếu có vấn đề phải pending Task. Move lại nó sang cột This Week.
+- Dev chọn 1 Task ở cột This Week và move sang cột In Progress. Mỗi Dev chỉ được có 1 Task duy nhất ở In Progress.
+- Nếu có vấn đề phải pending Task. Move lại nó sang cột Blocked, và ghi lý do.
 - Khi làm xong. Move Task sang cột Done.
 - Task được coi là Done khi:
     - Code hoàn thành và commit lên Git
@@ -62,7 +62,7 @@ Luôn báo lại cho quản lý, nếu có phát sinh vấn đề ngoài dự ki
 
 ## 6. Testing:
 - Kết quả Test thường sẽ đến muộn. Cho nên Sprint mới sẽ bắt đầu trước khi có kết quả Test.
-- Các Task phát sinh từ kết quả Test sẽ được đánh dấu là [BUG], phân loại theo mức độ High/Medium/Low, đưa chúng vào cột Backlog.
+- Các Task phát sinh từ kết quả Test sẽ được đánh dấu là [BUG], phân loại theo mức độ High/Normal/Low, đưa chúng vào cột Backlog.
 - Trong trường hợp cần fix khẩn cấp, báo lại cho quản lý để điều chỉnh lại Sprint.
 ### 6.1. Bug severity:
 - High: Crash/ANR/blocking
