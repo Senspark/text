@@ -15,14 +15,14 @@
 - Ngày bắt đầu của mỗi Sprint sẽ tuỳ thuộc vào project.
 
 ### Tổ chức của 1 Table:
-| Backlog | This Week (Sprint) | In Progress | Blocked | Done |
-|---------|--------------------|-------------|---------|------|
+| Backlog | This Sprint | In Progress | Blocked | Done |
+|---------|-------------|-------------|---------|------|
 
 ---
 
 # Phần 2: Các Stage của Sprint:
 ## 1. Planning:
-- Bắt đầu của mỗi Sprint sẽ có buổi họp Team để chọn các Task trong cột Backlog, estimate time & move chúng sang cột This Week
+- Bắt đầu của mỗi Sprint sẽ có buổi họp Team để chọn các Task trong cột Backlog, estimate time & move chúng sang cột This Sprint
 - Mỗi ngày Dev có 6 tiếng để làm việc theo Sprint.
 - Tổng cộng mỗi tuần Dev có 30 tiếng (10 tiếng còn lại dùng cho: thảo luận, suy nghĩ, vệ sinh, ăn uống, giải lao, ...).
 - Planning estimate time không được vượt quá 30 tiếng.
@@ -31,12 +31,12 @@
 - Đối với các Task chưa estimate được ngay (cần research). Tạo 1 Task Research. Điều chỉnh lại Sprint khi đã estimate xong.
 
 ## 2. Start Sprint:
-- Dev chỉ được thực hiện theo các Task ở cột This Week (Sprint)
+- Dev chỉ được thực hiện theo các Task ở cột This Sprint
 - Không thực hiện các yêu cầu của bên thứ 3, các phát sinh mới sẽ được thêm vào cột Backlog, sẽ lên lịch ở Sprint tiếp theo.
-- Khi Sprint đã bắt đầu, cột This Week không được thêm Task vào, chỉ có thể remove ra.
+- Khi Sprint đã bắt đầu, cột This Sprint không được thêm Task vào, chỉ có thể remove ra.
 
 ## 3. Processing:
-- Dev chọn 1 Task ở cột This Week và move sang cột In Progress. Mỗi Dev chỉ được có 1 Task duy nhất ở In Progress.
+- Dev chọn 1 Task ở cột This Sprint và move sang cột In Progress. Mỗi Dev chỉ được có 1 Task duy nhất ở In Progress.
 - Nếu có vấn đề phải pending Task. Move lại nó sang cột Blocked, và ghi lý do.
 - Khi làm xong. Move Task sang cột Done.
 - Task được coi là Done khi:
