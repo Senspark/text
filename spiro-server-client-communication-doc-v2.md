@@ -31,7 +31,9 @@ flowchart TD
 ```
 
 # Client push data:
-Client chia data thành các category: Push lên toàn bộ data của category đó theo schema đã quy định sẵn với server, ví dụ:
+Client chia data thành các category: 
+Nếu Client có thay đổi gì về data. Push lên toàn bộ data của category đó theo schema đã quy định sẵn với server,
+ví dụ:
 ```
 {
     "user_sneakers": [],
