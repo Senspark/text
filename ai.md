@@ -132,7 +132,7 @@ Khác với AI Model thông thường chỉ nhận input và trả output, **AI 
 
 ### Quy tắc cấu trúc project để Agent làm việc hiệu quả (Unity):
 
-**1. Cung cấp context rõ ràng qua `CLAUDE.md`**
+**1. Cung cấp context rõ ràng qua `CLAUDE.md`** (giả sử dùng Claude Code)
 
 Tạo file `CLAUDE.md` ở root project. Agent sẽ tự động đọc file này khi khởi động. Ghi vào đó:
 - Cấu trúc folder project
