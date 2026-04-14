@@ -12,7 +12,9 @@ Admin sẽ giao cho 1 QR Code
 
 ## Bước 3: Quét QR Code
 Trên giao diện của WireGuard: Bấm nút (+) và Quét QR code được Admin cung cấp.
+
 Đặt tên Tunnel tuỳ ý.
+
 QR code không thể được tái sử dụng ở nhiều thiết bị.
 
 ---
